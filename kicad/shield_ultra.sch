@@ -1,0 +1,655 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:switches
+LIBS:relays
+LIBS:motors
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:conn_shield
+LIBS:shield_ultra-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Shield pour périphériques"
+Date ""
+Rev "vx.x"
+Comp "Centrale Lyon"
+Comment1 ""
+Comment2 "Contacter G. CHARREAUX (chxguillaume@gmail.com)"
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text Notes 4750 4575 0    60   ~ 0
+Connecteurs du shield
+Text Notes 4750 4825 0    60   ~ 0
+RB3 = I2C CLK\nRB2 = I2C DATA
+$Comp
+L Conn_shield U1
+U 1 1 5ACC7828
+P 5775 4000
+F 0 "U1" H 5775 4000 60  0000 C CNN
+F 1 "Conn_shield" H 5775 4100 60  0000 C CNN
+F 2 "conn_shield:conn_shield" H 5775 4000 60  0001 C CNN
+F 3 "" H 5775 4000 60  0001 C CNN
+	1    5775 4000
+	-1   0    0    1   
+$EndComp
+Text Notes 5975 4800 0    60   ~ 0
+Relier L1 et V34 si \nbesoin d'un PIC 44 pattes
+$Comp
+L +3.3V #PWR01
+U 1 1 5ACC7EC0
+P 6600 2050
+F 0 "#PWR01" H 6600 1900 50  0001 C CNN
+F 1 "+3.3V" V 6600 2275 50  0000 C CNN
+F 2 "" H 6600 2050 50  0001 C CNN
+F 3 "" H 6600 2050 50  0001 C CNN
+	1    6600 2050
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR02
+U 1 1 5ACC7EF0
+P 6600 1950
+F 0 "#PWR02" H 6600 1700 50  0001 C CNN
+F 1 "GND" V 6600 1750 50  0000 C CNN
+F 2 "" H 6600 1950 50  0001 C CNN
+F 3 "" H 6600 1950 50  0001 C CNN
+	1    6600 1950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L +5V #PWR03
+U 1 1 5ACC7F13
+P 6600 3650
+F 0 "#PWR03" H 6600 3500 50  0001 C CNN
+F 1 "+5V" V 6600 3850 50  0000 C CNN
+F 2 "" H 6600 3650 50  0001 C CNN
+F 3 "" H 6600 3650 50  0001 C CNN
+	1    6600 3650
+	0    1    1    0   
+$EndComp
+$Comp
+L +3.3V #PWR04
+U 1 1 5ACC7F42
+P 6600 3750
+F 0 "#PWR04" H 6600 3600 50  0001 C CNN
+F 1 "+3.3V" V 6600 3975 50  0000 C CNN
+F 2 "" H 6600 3750 50  0001 C CNN
+F 3 "" H 6600 3750 50  0001 C CNN
+	1    6600 3750
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR05
+U 1 1 5ACC7F50
+P 6600 3850
+F 0 "#PWR05" H 6600 3600 50  0001 C CNN
+F 1 "GND" V 6600 3650 50  0000 C CNN
+F 2 "" H 6600 3850 50  0001 C CNN
+F 3 "" H 6600 3850 50  0001 C CNN
+	1    6600 3850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GND #PWR06
+U 1 1 5ACC7F5E
+P 6600 2950
+F 0 "#PWR06" H 6600 2700 50  0001 C CNN
+F 1 "GND" V 6600 2750 50  0000 C CNN
+F 2 "" H 6600 2950 50  0001 C CNN
+F 3 "" H 6600 2950 50  0001 C CNN
+	1    6600 2950
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6600 1950 6275 1950
+Wire Wire Line
+	6600 2050 6275 2050
+Wire Wire Line
+	6275 2950 6600 2950
+Wire Wire Line
+	6275 3650 6600 3650
+Wire Wire Line
+	6275 3750 6600 3750
+Wire Wire Line
+	6275 3850 6600 3850
+$Comp
+L GND #PWR07
+U 1 1 5ACC7F98
+P 4950 1950
+F 0 "#PWR07" H 4950 1700 50  0001 C CNN
+F 1 "GND" V 4950 1750 50  0000 C CNN
+F 2 "" H 4950 1950 50  0001 C CNN
+F 3 "" H 4950 1950 50  0001 C CNN
+	1    4950 1950
+	0    1    -1   0   
+$EndComp
+$Comp
+L +5V #PWR08
+U 1 1 5ACC7F9E
+P 4950 3650
+F 0 "#PWR08" H 4950 3500 50  0001 C CNN
+F 1 "+5V" V 4950 3850 50  0000 C CNN
+F 2 "" H 4950 3650 50  0001 C CNN
+F 3 "" H 4950 3650 50  0001 C CNN
+	1    4950 3650
+	0    -1   1    0   
+$EndComp
+$Comp
+L +3.3V #PWR09
+U 1 1 5ACC7FA4
+P 4950 3750
+F 0 "#PWR09" H 4950 3600 50  0001 C CNN
+F 1 "+3.3V" V 4950 3975 50  0000 C CNN
+F 2 "" H 4950 3750 50  0001 C CNN
+F 3 "" H 4950 3750 50  0001 C CNN
+	1    4950 3750
+	0    -1   1    0   
+$EndComp
+$Comp
+L GND #PWR010
+U 1 1 5ACC7FAA
+P 4950 3850
+F 0 "#PWR010" H 4950 3600 50  0001 C CNN
+F 1 "GND" V 4950 3650 50  0000 C CNN
+F 2 "" H 4950 3850 50  0001 C CNN
+F 3 "" H 4950 3850 50  0001 C CNN
+	1    4950 3850
+	0    1    -1   0   
+$EndComp
+$Comp
+L GND #PWR011
+U 1 1 5ACC7FB0
+P 4950 2950
+F 0 "#PWR011" H 4950 2700 50  0001 C CNN
+F 1 "GND" V 4950 2750 50  0000 C CNN
+F 2 "" H 4950 2950 50  0001 C CNN
+F 3 "" H 4950 2950 50  0001 C CNN
+	1    4950 2950
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	4950 1950 5275 1950
+Wire Wire Line
+	4950 2050 5275 2050
+Wire Wire Line
+	5275 2950 4950 2950
+Wire Wire Line
+	5275 3650 4950 3650
+Wire Wire Line
+	5275 3750 4950 3750
+Wire Wire Line
+	5275 3850 4950 3850
+$Comp
+L +5V #PWR012
+U 1 1 5ACC7FC5
+P 4950 2050
+F 0 "#PWR012" H 4950 1900 50  0001 C CNN
+F 1 "+5V" V 4950 2250 50  0000 C CNN
+F 2 "" H 4950 2050 50  0001 C CNN
+F 3 "" H 4950 2050 50  0001 C CNN
+	1    4950 2050
+	0    -1   1    0   
+$EndComp
+$Comp
+L PWR_FLAG #FLG013
+U 1 1 5ACC800C
+P 6300 3975
+F 0 "#FLG013" H 6300 4050 50  0001 C CNN
+F 1 "PWR_FLAG" V 6300 4300 50  0000 C CNN
+F 2 "" H 6300 3975 50  0001 C CNN
+F 3 "" H 6300 3975 50  0001 C CNN
+	1    6300 3975
+	-1   0    0    1   
+$EndComp
+$Comp
+L PWR_FLAG #FLG014
+U 1 1 5ACC802C
+P 6400 3975
+F 0 "#FLG014" H 6400 4050 50  0001 C CNN
+F 1 "PWR_FLAG" V 6400 4300 50  0000 C CNN
+F 2 "" H 6400 3975 50  0001 C CNN
+F 3 "" H 6400 3975 50  0001 C CNN
+	1    6400 3975
+	-1   0    0    1   
+$EndComp
+$Comp
+L PWR_FLAG #FLG015
+U 1 1 5ACC803A
+P 6500 3975
+F 0 "#FLG015" H 6500 4050 50  0001 C CNN
+F 1 "PWR_FLAG" V 6500 4300 50  0000 C CNN
+F 2 "" H 6500 3975 50  0001 C CNN
+F 3 "" H 6500 3975 50  0001 C CNN
+	1    6500 3975
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6300 3975 6300 3650
+Connection ~ 6300 3650
+Wire Wire Line
+	6400 3975 6400 3750
+Connection ~ 6400 3750
+Wire Wire Line
+	6500 3975 6500 3850
+Connection ~ 6500 3850
+Wire Wire Line
+	5275 2150 5100 2150
+Wire Wire Line
+	5100 2150 5100 2250
+Wire Wire Line
+	5100 2250 5275 2250
+$Comp
+L Conn_01x04 J1
+U 1 1 5ACC8072
+P 1725 3250
+F 0 "J1" V 1925 3200 50  0000 C CNN
+F 1 "Ultrason" V 1850 3200 50  0000 C CNN
+F 2 "Connectors_Molex:Molex_KK-6410-04_04x2.54mm_Straight" H 1725 3250 50  0001 C CNN
+F 3 "" H 1725 3250 50  0001 C CNN
+	1    1725 3250
+	0    -1   1    0   
+$EndComp
+$Comp
+L Conn_01x04 J5
+U 1 1 5ACC8205
+P 2225 3250
+F 0 "J5" V 2425 3200 50  0000 C CNN
+F 1 "Ultrason" V 2350 3200 50  0000 C CNN
+F 2 "Connectors_Molex:Molex_KK-6410-04_04x2.54mm_Straight" H 2225 3250 50  0001 C CNN
+F 3 "" H 2225 3250 50  0001 C CNN
+	1    2225 3250
+	0    -1   1    0   
+$EndComp
+$Comp
+L Conn_01x04 J7
+U 1 1 5ACC8256
+P 2725 3250
+F 0 "J7" V 2925 3200 50  0000 C CNN
+F 1 "Ultrason" V 2850 3200 50  0000 C CNN
+F 2 "Connectors_Molex:Molex_KK-6410-04_04x2.54mm_Straight" H 2725 3250 50  0001 C CNN
+F 3 "" H 2725 3250 50  0001 C CNN
+	1    2725 3250
+	0    -1   1    0   
+$EndComp
+$Comp
+L GND #PWR016
+U 1 1 5ACC82C4
+P 1250 2625
+F 0 "#PWR016" H 1250 2375 50  0001 C CNN
+F 1 "GND" V 1250 2425 50  0000 C CNN
+F 2 "" H 1250 2625 50  0001 C CNN
+F 3 "" H 1250 2625 50  0001 C CNN
+	1    1250 2625
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	1250 2625 3625 2625
+Wire Wire Line
+	1250 2525 3725 2525
+$Comp
+L +5V #PWR017
+U 1 1 5ACC82CC
+P 1250 2525
+F 0 "#PWR017" H 1250 2375 50  0001 C CNN
+F 1 "+5V" V 1250 2725 50  0000 C CNN
+F 2 "" H 1250 2525 50  0001 C CNN
+F 3 "" H 1250 2525 50  0001 C CNN
+	1    1250 2525
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	1625 2625 1625 3050
+Wire Wire Line
+	2125 2625 2125 3050
+Connection ~ 1625 2625
+Wire Wire Line
+	2625 2625 2625 3050
+Connection ~ 2125 2625
+Wire Wire Line
+	1925 2525 1925 3050
+Wire Wire Line
+	2425 2525 2425 3050
+Connection ~ 1925 2525
+Wire Wire Line
+	2925 2525 2925 3050
+Connection ~ 2425 2525
+Wire Wire Line
+	1725 3050 1725 2775
+Text Label 1725 2775 3    60   ~ 0
+B4
+Wire Wire Line
+	2225 3050 2225 2775
+Text Label 2225 2775 3    60   ~ 0
+B4
+Wire Wire Line
+	2725 3050 2725 2775
+Text Label 2725 2775 3    60   ~ 0
+B4
+Wire Wire Line
+	1825 3050 1825 2775
+Text Label 1825 2775 3    60   ~ 0
+B5
+Wire Wire Line
+	2325 3050 2325 2775
+Text Label 2325 2775 3    60   ~ 0
+B6
+Wire Wire Line
+	2825 3050 2825 2775
+Text Label 2825 2775 3    60   ~ 0
+B7
+Wire Wire Line
+	6275 3550 6550 3550
+Text Label 6550 3550 2    60   ~ 0
+B0
+Wire Wire Line
+	6275 3450 6550 3450
+Text Label 6550 3450 2    60   ~ 0
+B1
+Wire Wire Line
+	6275 3350 6550 3350
+Text Label 6550 3350 2    60   ~ 0
+B2
+Wire Wire Line
+	6275 3250 6550 3250
+Text Label 6550 3250 2    60   ~ 0
+B3
+$Comp
+L Conn_01x03 J8
+U 1 1 5ACC8583
+P 3325 3250
+F 0 "J8" V 3525 3250 50  0000 C CNN
+F 1 "Ultrason" V 3450 3250 50  0000 C CNN
+F 2 "Connectors_Molex:Molex_KK-6410-03_03x2.54mm_Straight" H 3325 3250 50  0001 C CNN
+F 3 "" H 3325 3250 50  0001 C CNN
+	1    3325 3250
+	0    -1   1    0   
+$EndComp
+$Comp
+L Conn_01x03 J9
+U 1 1 5ACC8663
+P 3725 3250
+F 0 "J9" V 3925 3250 50  0000 C CNN
+F 1 "Ultrason" V 3850 3250 50  0000 C CNN
+F 2 "Connectors_Molex:Molex_KK-6410-03_03x2.54mm_Straight" H 3725 3250 50  0001 C CNN
+F 3 "" H 3725 3250 50  0001 C CNN
+	1    3725 3250
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	3225 2625 3225 3050
+Connection ~ 2625 2625
+Wire Wire Line
+	3625 2625 3625 3050
+Connection ~ 3225 2625
+Wire Wire Line
+	3325 2525 3325 3050
+Connection ~ 2925 2525
+Wire Wire Line
+	3725 2525 3725 3050
+Connection ~ 3325 2525
+Wire Wire Line
+	3825 3050 3825 2775
+Text Label 3825 2775 3    60   ~ 0
+B1
+Wire Wire Line
+	3425 3050 3425 2775
+Text Label 3425 2775 3    60   ~ 0
+B0
+Wire Wire Line
+	5275 3550 5000 3550
+Text Label 5000 3550 0    60   ~ 0
+B4
+Wire Wire Line
+	5275 3450 5000 3450
+Text Label 5000 3450 0    60   ~ 0
+B5
+$Comp
+L Conn_01x03 J2
+U 1 1 5ACC9047
+P 1725 4450
+F 0 "J2" V 1925 4450 50  0000 C CNN
+F 1 "IR" V 1850 4450 50  0000 C CNN
+F 2 "Connectors_Molex:Molex_KK-6410-03_03x2.54mm_Straight" H 1725 4450 50  0001 C CNN
+F 3 "" H 1725 4450 50  0001 C CNN
+	1    1725 4450
+	0    -1   1    0   
+$EndComp
+$Comp
+L Conn_01x03 J4
+U 1 1 5ACC9129
+P 2125 4450
+F 0 "J4" V 2325 4450 50  0000 C CNN
+F 1 "IR" V 2250 4450 50  0000 C CNN
+F 2 "Connectors_Molex:Molex_KK-6410-03_03x2.54mm_Straight" H 2125 4450 50  0001 C CNN
+F 3 "" H 2125 4450 50  0001 C CNN
+	1    2125 4450
+	0    -1   1    0   
+$EndComp
+$Comp
+L Conn_01x03 J6
+U 1 1 5ACC9187
+P 2525 4450
+F 0 "J6" V 2725 4450 50  0000 C CNN
+F 1 "IR" V 2650 4450 50  0000 C CNN
+F 2 "Connectors_Molex:Molex_KK-6410-03_03x2.54mm_Straight" H 2525 4450 50  0001 C CNN
+F 3 "" H 2525 4450 50  0001 C CNN
+	1    2525 4450
+	0    -1   1    0   
+$EndComp
+$Comp
+L GND #PWR018
+U 1 1 5ACC92E2
+P 1475 3925
+F 0 "#PWR018" H 1475 3675 50  0001 C CNN
+F 1 "GND" V 1475 3725 50  0000 C CNN
+F 2 "" H 1475 3925 50  0001 C CNN
+F 3 "" H 1475 3925 50  0001 C CNN
+	1    1475 3925
+	0    1    -1   0   
+$EndComp
+$Comp
+L +5V #PWR019
+U 1 1 5ACC92EA
+P 1475 3825
+F 0 "#PWR019" H 1475 3675 50  0001 C CNN
+F 1 "+5V" V 1475 4025 50  0000 C CNN
+F 2 "" H 1475 3825 50  0001 C CNN
+F 3 "" H 1475 3825 50  0001 C CNN
+	1    1475 3825
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	1475 3825 2425 3825
+Wire Wire Line
+	1625 3825 1625 4250
+Wire Wire Line
+	2025 3825 2025 4250
+Connection ~ 1625 3825
+Wire Wire Line
+	2425 3825 2425 4250
+Connection ~ 2025 3825
+Wire Wire Line
+	1475 3925 2525 3925
+Wire Wire Line
+	1725 3925 1725 4250
+Wire Wire Line
+	2125 3925 2125 4250
+Connection ~ 1725 3925
+Wire Wire Line
+	2525 3925 2525 4250
+Connection ~ 2125 3925
+Wire Wire Line
+	1825 4250 1825 4000
+Wire Wire Line
+	2225 4250 2225 4000
+Wire Wire Line
+	2625 4250 2625 4000
+Text Label 1825 4000 3    60   ~ 0
+C0
+Text Label 2225 4000 3    60   ~ 0
+C1
+Text Label 2625 4000 3    60   ~ 0
+C2
+$Comp
+L Conn_01x04 J3
+U 1 1 5ACC9AF5
+P 1725 5575
+F 0 "J3" V 1925 5525 50  0000 C CNN
+F 1 "Accel" V 1850 5525 50  0000 C CNN
+F 2 "Connectors_Molex:Molex_KK-6410-04_04x2.54mm_Straight" H 1725 5575 50  0001 C CNN
+F 3 "" H 1725 5575 50  0001 C CNN
+	1    1725 5575
+	0    -1   1    0   
+$EndComp
+$Comp
+L +3.3V #PWR020
+U 1 1 5ACCA1D7
+P 1475 5275
+F 0 "#PWR020" H 1475 5125 50  0001 C CNN
+F 1 "+3.3V" V 1475 5500 50  0000 C CNN
+F 2 "" H 1475 5275 50  0001 C CNN
+F 3 "" H 1475 5275 50  0001 C CNN
+	1    1475 5275
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GND #PWR021
+U 1 1 5ACCA1DD
+P 1475 5175
+F 0 "#PWR021" H 1475 4925 50  0001 C CNN
+F 1 "GND" V 1475 4975 50  0000 C CNN
+F 2 "" H 1475 5175 50  0001 C CNN
+F 3 "" H 1475 5175 50  0001 C CNN
+	1    1475 5175
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1475 5275 1625 5275
+Wire Wire Line
+	1625 5275 1625 5375
+Wire Wire Line
+	1475 5175 1725 5175
+Wire Wire Line
+	1725 5175 1725 5375
+Wire Wire Line
+	1825 5025 1825 5375
+Wire Wire Line
+	1925 5025 1925 5375
+Wire Wire Line
+	1925 5175 2225 5175
+Connection ~ 1925 5175
+$Comp
+L R R1
+U 1 1 5ACCA44A
+P 2375 5175
+F 0 "R1" V 2300 5175 50  0000 C CNN
+F 1 "10K" V 2375 5175 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 2305 5175 50  0001 C CNN
+F 3 "" H 2375 5175 50  0001 C CNN
+	1    2375 5175
+	0    1    1    0   
+$EndComp
+$Comp
+L R R2
+U 1 1 5ACCA4C6
+P 2375 5325
+F 0 "R2" V 2455 5325 50  0000 C CNN
+F 1 "10K" V 2375 5325 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 2305 5325 50  0001 C CNN
+F 3 "" H 2375 5325 50  0001 C CNN
+	1    2375 5325
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2225 5325 1825 5325
+Connection ~ 1825 5325
+Wire Wire Line
+	2525 5175 2650 5175
+Wire Wire Line
+	2650 5175 2650 5325
+Wire Wire Line
+	2650 5325 2525 5325
+Wire Wire Line
+	2650 5250 2750 5250
+Connection ~ 2650 5250
+$Comp
+L +3.3V #PWR022
+U 1 1 5ACCA707
+P 2750 5250
+F 0 "#PWR022" H 2750 5100 50  0001 C CNN
+F 1 "+3.3V" V 2750 5475 50  0000 C CNN
+F 2 "" H 2750 5250 50  0001 C CNN
+F 3 "" H 2750 5250 50  0001 C CNN
+	1    2750 5250
+	0    1    1    0   
+$EndComp
+Text Label 1825 5025 3    60   ~ 0
+B2
+Text Label 1925 5025 3    60   ~ 0
+B3
+Wire Wire Line
+	5275 3350 5000 3350
+Text Label 5000 3350 0    60   ~ 0
+B6
+Wire Wire Line
+	5275 3250 5000 3250
+Text Label 5000 3250 0    60   ~ 0
+B7
+Wire Wire Line
+	6275 2850 6550 2850
+Text Label 6550 2850 2    60   ~ 0
+C0
+Wire Wire Line
+	6275 2750 6550 2750
+Text Label 6550 2750 2    60   ~ 0
+C1
+Wire Wire Line
+	6275 2650 6550 2650
+Text Label 6550 2650 2    60   ~ 0
+C2
+NoConn ~ 6275 2150
+NoConn ~ 6275 2250
+NoConn ~ 6275 2350
+NoConn ~ 6275 2450
+NoConn ~ 6275 2550
+NoConn ~ 6275 3050
+NoConn ~ 6275 3150
+NoConn ~ 5275 3150
+NoConn ~ 5275 3050
+NoConn ~ 5275 2850
+NoConn ~ 5275 2750
+NoConn ~ 5275 2650
+NoConn ~ 5275 2550
+NoConn ~ 5275 2450
+NoConn ~ 5275 2350
+$EndSCHEMATC
