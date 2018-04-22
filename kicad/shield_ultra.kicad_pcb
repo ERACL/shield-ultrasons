@@ -15,7 +15,8 @@
   (page A4)
   (title_block
     (title "Shield pour périphériques - Robot 2A année 2018")
-    (rev vx.x)
+    (date 2018-04-22)
+    (rev v1.0)
     (company "Centrale Lyon")
     (comment 1 "Contcter G. CHARREAUX (chxguillaume@gmail.com)")
   )
@@ -1000,7 +1001,7 @@
   (gr_arc (start 40.005 89.535) (end 40.005 94.615) (angle 90) (layer Edge.Cuts) (width 0.2))
   (gr_arc (start 40.005 27.305) (end 34.925 27.305) (angle 90) (layer Edge.Cuts) (width 0.2))
   (gr_arc (start 109.855 27.305) (end 109.855 22.225) (angle 90) (layer Edge.Cuts) (width 0.2))
-  (gr_text "Shield périphérique - Robot 2A 2018\nVersion x.x" (at 39.37 57.785 270) (layer F.SilkS)
+  (gr_text "Shield périphérique - Robot 2A 2018\nVersion 1.0" (at 39.37 57.785 270) (layer F.SilkS)
     (effects (font (size 1.5 1.5) (thickness 0.3)))
   )
 
